@@ -1,0 +1,7 @@
+{
+  "name": "APINews",
+  "version": "1.0.0",
+  "dependencies": {
+    "sockjs-client": "^1.6.1"
+  }
+}
