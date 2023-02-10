@@ -33,8 +33,8 @@ public class ChatController {
             return newsData.getArticles();
         }
     }
-    @GetMapping("/top")
-    public String helo() throws IOException {
-        return "Hello you!";
+    @GetMapping("/top/{id}")
+    public String helo(@PathVariable String id) throws IOException {
+        return id;
     }
 }
