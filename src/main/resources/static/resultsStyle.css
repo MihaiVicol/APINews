@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.background-t{
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+    background: rgb(255,248,0);
+    background: linear-gradient(228deg, rgba(255,248,0,1) 0%, rgba(213,203,31,1) 27%, rgba(252,170,5,1) 49%, rgba(231,194,47,1) 73%, rgba(254,255,0,0.9164915966386554) 100%);
+    
+}
+
+.newspaper{
+    position: absolute;
+    opacity: 0.1;
+}
+
+.title{
+    margin-top: 1%;
+    color: lightseagreen;
+    margin-left: 4%;
+    font-size: 5.6vh;
+    text-shadow: 0 0 2px #dfdfdf, 
+      -4px 5px 0 #b8b8b8, 
+      -7px 11px 0 #747474,
+      -12px 17px 0 #343434,
+      -17px 23px 0 #000;
+}
+
+.results{
+    background-color: white;
+    width: 80%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border-radius: 7px;
+    border: 5px solid black;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.home-link:visited{
+    color: lightcoral;
+}
+
+.numbers{
+    margin-top: 0.5%;
+    margin-left: 1%;
+    font-size: 2vh;
+    font-weight: normal;
+    color: grey;
+    margin-bottom: 3%;
+}
+
+.news-article{
+    width: 200%;
+    margin-left: 1%;
+    height: 25%;
+    margin-top: 7%;
+}
+
+.url-p{
+    font-size: 2vh;
+    font-weight: normal;
+    color: grey;
+}
+
+.url-link:visited{
+    color:grey;
+}
+
+.source{
+    display: inline;
+    font-size: 4vh;
+    color: blue;
+    font-weight: 150;
+}
+
+.news-title{
+    font-weight: 150;
+    display: inline;
+    font-size: 4vh;
+    color: blue;
+}
+
+.description{
+    font-size: 2vh;
+    font-weight: normal;
+}
