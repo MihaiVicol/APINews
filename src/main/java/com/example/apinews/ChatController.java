@@ -8,10 +8,10 @@ import java.io.*;
 import java.util.List;
 
 
-@CrossOrigin(origins= {"*"}, maxAge = 92000, allowCredentials = "false")
 @RestController
 public class ChatController {
     @PostMapping("/topic")
+    @CrossOrigin(origins = "apinews-production.up.railway.app")
     public List<Article> hello(@RequestBody DataFE dataFe) throws IOException {
         if(dataFe.getKeyword() != null) {
             String uri = "https://newsapi.org/v2/everything?q=" + Character.toString((char) 34);
