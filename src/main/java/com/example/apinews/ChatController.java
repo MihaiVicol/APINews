@@ -11,28 +11,16 @@ import java.util.StringTokenizer;
 
 @RestController
 public class ChatController {
-    @PostMapping("/topic")
-    public List<Article> hello(@RequestBody DataFE dataFe) throws IOException {
-        if(dataFe.getKeyword() != null) {
-            String uri = "https://newsapi.org/v2/everything?q=" + Character.toString((char) 34);
-            uri += dataFe.getKeyword() + Character.toString((char) 34);
-            uri += "&from=" + dataFe.getDateST() +"&to=" + dataFe.getDateND();
-            uri += "&sortBy=popularity&apiKey=f64197ac47514e499cdd1b9a0e911cde";
-            RestTemplate restTemplate = new RestTemplate();
-            ObjectMapper mapper = new ObjectMapper();
-            NewsData newsData = mapper.readValue(restTemplate.getForObject(uri, String.class), NewsData.class);
-            return newsData.getArticles();
-        }
-        else{
+    @GetMapping("/top/{country}/{category}")
+    public List<Article> hello(@PathVariable String country, @PathVariable String category) throws IOException {
             String uri = "https://newsapi.org/v2/top-headlines?country=";
-            uri+= dataFe.getCountry();
-            uri+= "&category=" + dataFe.getCategory();
+            uri+= country;
+            uri+= "&category=" + category;
             uri += "&apiKey=f64197ac47514e499cdd1b9a0e911cde";
             RestTemplate restTemplate = new RestTemplate();
             ObjectMapper mapper = new ObjectMapper();
             NewsData newsData = mapper.readValue(restTemplate.getForObject(uri, String.class), NewsData.class);
             return newsData.getArticles();
-        }
     }
     @GetMapping("/top/{id}/{stDate}/{ndDate}")
     public List<Article> helo(@PathVariable String id, @PathVariable String stDate, @PathVariable String ndDate) throws IOException {
