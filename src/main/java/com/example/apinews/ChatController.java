@@ -2,10 +2,7 @@ package com.example.apinews;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import java.io.*;
 import java.util.List;
@@ -14,7 +11,7 @@ import java.util.List;
 @CrossOrigin(origins= {"*"}, maxAge = 92000, allowCredentials = "false")
 @RestController
 public class ChatController {
-    @GetMapping("/topic")
+    @PostMapping("/topic")
     public List<Article> hello(@RequestBody DataFE dataFe) throws IOException {
         if(dataFe.getKeyword() != null) {
             String uri = "https://newsapi.org/v2/everything?q=" + Character.toString((char) 34);
