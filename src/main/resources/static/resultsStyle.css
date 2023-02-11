@@ -15,9 +15,7 @@
     display: block;
     overflow: hidden;
     height: 100vh;
-    background: rgb(255,248,0);
-    background: linear-gradient(228deg, rgba(255,248,0,1) 0%, rgba(213,203,31,1) 27%, rgba(252,170,5,1) 49%, rgba(231,194,47,1) 73%, rgba(254,255,0,0.9164915966386554) 100%);
-    
+    background: rgb(5,197,237);
 }
 
 .newspaper{
@@ -31,7 +29,7 @@
 
 .title{
     margin-top: 1%;
-    color: lightseagreen;
+    color: black;
     margin-left: 4%;
     font-size: 5.6vh;
 
